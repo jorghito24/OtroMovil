@@ -1,0 +1,27 @@
+<ion-content>
+    <ion-header>
+        <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="/"></ion-back-button>
+            </ion-buttons>
+            <ion-title>Ingresar</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-card-content class="intro">
+        <strong>Selecciona tu requisito.</strong>
+
+    </ion-card-content>
+    <ion-button [routerLink]="['/login']" class="btn-ingresar" expand="block">
+        Profesor/a
+    </ion-button>
+    <ion-button [routerLink]="['/login']" class="btn-ingresar" expand="block">
+        Alumno/a
+    </ion-button>
+    <ion-button [routerLink]="['/registro']" expand="block">
+        Registrar
+    </ion-button>
+
+    <ion-button (click)="obtenerDatos()" expand="block">
+        Boton qlo de prueba
+    </ion-button>
+</ion-content>

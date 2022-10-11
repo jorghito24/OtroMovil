@@ -1,0 +1,52 @@
+<!--Inicio imagen DUOC-->
+<img src="../../assets/icon/duocuc.png" alt="" class="img-duoc">
+<!--Fin imagen DUOC-->
+
+<ion-content>
+    <ion-header>
+        <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="/"></ion-back-button>
+            </ion-buttons>
+            <ion-title>Iniciar sesión</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <!--Inicio formulario-->
+    <ion-card-content>
+        <form [formGroup]="formularioLogin">
+            <ion-item>
+                <ion-label position="floating">Nombre</ion-label>
+                <ion-input formControlName="nombre"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Contraseña</ion-label>
+                <ion-input formControlName="password" type="password"></ion-input>
+            </ion-item>
+        </form>
+        <br>
+        <ion-button [routerLink]="['/principal']" class="btn-ingresar" expand="block">
+            Ingresar
+        </ion-button>
+    </ion-card-content>
+    <!--Fin de formulario-->
+
+
+
+    <div style="background-color: rgb(0, 0, 0);">
+        <ion-card-content class="intro">
+            <strong>Ingresa tu correo institucional y tu contraseña. A continuación, escanea el código QR que proyectará tu docente.</strong>
+
+        </ion-card-content>
+    </div>
+
+    <!--Botón Recuperar contraseña-->
+    <ion-footer>
+        <ion-toolbar class="contRecPass">
+            <ion-buttons slot="end">
+                <ion-button [routerLink]="['/recuperar']" class="btn-recPass" expand="block">
+                    Recuperar Contraseña
+                </ion-button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-footer>
+</ion-content>
